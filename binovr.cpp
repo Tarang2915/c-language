@@ -38,5 +38,5 @@ int main()
     cout << "Volume of Box B: " << b.displaydata() << endl;
 
     c = a - b;
-    cout << "Volume of Box A: " << c.displaydata() << endl;
+    cout << "Volume of Box c: " << c.displaydata() << endl;
 }
