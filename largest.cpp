@@ -2,9 +2,9 @@
 using namespace std;
 class Largest
 {
+    int x, y, z;
 
 public:
-    int x, y;
     void takedata()
     {
         cout << "Enter First Value: ";
@@ -13,25 +13,34 @@ public:
         cin >> y;
     }
     friend Largest max(Largest);
+
+    void showdata()
+    {
+        cout << "Largest Value: " << z;
+    }
 };
 
 Largest max(Largest t)
 {
+    Largest l;
     if (t.x > t.y)
     {
-        cout << "Largest Value: " << t.x;
+        l.z = t.x;
+        return l;
     }
     else
     {
-        cout << "Largest Value: " << t.y;
+        l.z = t.y;
+        return l;
     }
 }
 
 int main()
 {
-    Largest i;
+    Largest i, j;
 
     i.takedata();
 
-    max(i);
+    j = max(i);
+    j.showdata();
 }
